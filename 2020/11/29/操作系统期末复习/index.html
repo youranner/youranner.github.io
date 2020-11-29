@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>操作系统期末复习 | YOURanner</title><meta name="keywords" content="操作系统"><meta name="author" content="shrilly"><meta name="copyright" content="shrilly"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="操作系统引论操作系统的目标和作用操作系统的目标 方便性  有效性  可扩容性  开放性   操作系统的作用 OS作为用户和硬件系统之间的接口 OS作为计算机系统资源的管理者 OS作为对计算机资源的抽象  操作系统的发展过程 无操作系统的计算机系统  单道批操作系统  多道批操作系统  分时系统 多路线 及时性 独立性 交互性  实时系统  微机操作系统   操作系统的基本特征 并发性 一段时间内，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统期末复习">
+<meta property="og:url" content="https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="YOURanner">
+<meta property="og:description" content="操作系统引论操作系统的目标和作用操作系统的目标 方便性  有效性  可扩容性  开放性   操作系统的作用 OS作为用户和硬件系统之间的接口 OS作为计算机系统资源的管理者 OS作为对计算机资源的抽象  操作系统的发展过程 无操作系统的计算机系统  单道批操作系统  多道批操作系统  分时系统 多路线 及时性 独立性 交互性  实时系统  微机操作系统   操作系统的基本特征 并发性 一段时间内，">
+<meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg">
+<meta property="article:published_time" content="2020-11-29T03:40:25.000Z">
+<meta property="article:modified_time" content="2020-11-29T08:40:04.973Z">
+<meta property="article:author" content="shrilly">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-29 16:40:04'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">YOURanner</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">操作系统期末复习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-11-29T03:40:25.000Z" title="Created 2020-11-29 11:40:25">2020-11-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-11-29T08:40:04.973Z" title="Updated 2020-11-29 16:40:04">2020-11-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/knowledge/">knowledge</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="操作系统引论"><a href="#操作系统引论" class="headerlink" title="操作系统引论"></a>操作系统引论</h2><h3 id="操作系统的目标和作用"><a href="#操作系统的目标和作用" class="headerlink" title="操作系统的目标和作用"></a>操作系统的目标和作用</h3><h4 id="操作系统的目标"><a href="#操作系统的目标" class="headerlink" title="操作系统的目标"></a>操作系统的目标</h4><ul>
+<li><p>方便性</p>
+</li>
+<li><p>有效性</p>
+</li>
+<li><p>可扩容性</p>
+</li>
+<li><p>开放性</p>
+</li>
+</ul>
+<h4 id="操作系统的作用"><a href="#操作系统的作用" class="headerlink" title="操作系统的作用"></a>操作系统的作用</h4><ul>
+<li>OS作为用户和硬件系统之间的接口</li>
+<li>OS作为计算机系统资源的管理者</li>
+<li>OS作为对计算机资源的抽象</li>
+</ul>
+<h3 id="操作系统的发展过程"><a href="#操作系统的发展过程" class="headerlink" title="操作系统的发展过程"></a>操作系统的发展过程</h3><ul>
+<li><p>无操作系统的计算机系统</p>
+</li>
+<li><p>单道批操作系统</p>
+</li>
+<li><p>多道批操作系统</p>
+</li>
+<li><p>分时系统</p>
+<p>多路线</p>
+<p>及时性</p>
+<p>独立性</p>
+<p>交互性</p>
+</li>
+<li><p>实时系统</p>
+</li>
+<li><p>微机操作系统</p>
+</li>
+</ul>
+<h3 id="操作系统的基本特征"><a href="#操作系统的基本特征" class="headerlink" title="操作系统的基本特征"></a>操作系统的基本特征</h3><ul>
+<li><p>并发性</p>
+<p>一段时间内，多个程序同时运行。</p>
+</li>
+<li><p>共享性</p>
+<p>互斥共享</p>
+<p>同时访问</p>
+</li>
+<li><p>虚拟性</p>
+</li>
+<li><p>异步性</p>
+<p>程序以不可预知的速度向前运行</p>
+</li>
+</ul>
+<h3 id="操作系统的功能"><a href="#操作系统的功能" class="headerlink" title="操作系统的功能"></a>操作系统的功能</h3><ul>
+<li>处理机管理</li>
+<li>存储器管理</li>
+<li>设备管理</li>
+<li>文件管理</li>
+<li>友好的用户接口</li>
+<li>现代操作系统的新功能</li>
+</ul>
+<h3 id="操作系统的结构设计"><a href="#操作系统的结构设计" class="headerlink" title="操作系统的结构设计"></a>操作系统的结构设计</h3><ul>
+<li><p>无结构OS</p>
+</li>
+<li><p>模块化OS</p>
+</li>
+<li><p>分层次OS</p>
+<p>优点</p>
+<ol>
+<li>易保护系统的正确性</li>
+<li>易扩展和易维护性</li>
+</ol>
+<p>缺点</p>
+<p>​     系统效率降低</p>
+</li>
+<li><p>微内核OS</p>
+</li>
+</ul>
+<p>基本概念</p>
+<ol>
+<li>足够小的内核</li>
+<li>集与客户/服务器模式</li>
+<li>应用机制与策略分离原理</li>
+<li>采用面向对象技术</li>
+</ol>
+<p>优点</p>
+<ol>
+<li>提高了系统的可扩展性</li>
+<li>增强了系统的可靠性</li>
+<li>可移植性强</li>
+<li>提供了对分布式系统的支持</li>
+<li>融入了面向对象技术</li>
+</ol>
+<h2 id="进程的描述与控制"><a href="#进程的描述与控制" class="headerlink" title="进程的描述与控制"></a>进程的描述与控制</h2><h3 id="前驱图和程序执行"><a href="#前驱图和程序执行" class="headerlink" title="前驱图和程序执行"></a>前驱图和程序执行</h3><h4 id="前驱图"><a href="#前驱图" class="headerlink" title="前驱图"></a>前驱图</h4><p>有向无循环图</p>
+<h4 id="程序顺序执行"><a href="#程序顺序执行" class="headerlink" title="程序顺序执行"></a>程序顺序执行</h4><ul>
+<li>顺序性</li>
+<li>封闭性</li>
+<li>可在现性</li>
+</ul>
+<h4 id="程序并发执行"><a href="#程序并发执行" class="headerlink" title="程序并发执行"></a>程序并发执行</h4><ul>
+<li>间断性</li>
+<li>失去封闭性</li>
+<li>不可再现性</li>
+</ul>
+<h3 id="进程的描述"><a href="#进程的描述" class="headerlink" title="进程的描述"></a>进程的描述</h3><h4 id="进程的定义和特征"><a href="#进程的定义和特征" class="headerlink" title="进程的定义和特征"></a>进程的定义和特征</h4><h5 id="定义-PCB"><a href="#定义-PCB" class="headerlink" title="定义(PCB)"></a>定义(PCB)</h5><ul>
+<li>进程是程序的一次执行</li>
+<li>进程是一个程序及其数据在处理机上顺序执行时所 发生的活动</li>
+<li>系统进行资源分配和调度的一个独立单位</li>
+</ul>
+<h5 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h5><ul>
+<li>动态性</li>
+<li>并发性</li>
+<li>独立性</li>
+<li> 异步性</li>
+</ul>
+<h4 id="进程的基本状态及转换"><a href="#进程的基本状态及转换" class="headerlink" title="进程的基本状态及转换"></a>进程的基本状态及转换</h4><h5 id="进程的三种基本状态"><a href="#进程的三种基本状态" class="headerlink" title="进程的三种基本状态"></a>进程的三种基本状态</h5><ul>
+<li> 就绪(Ready)状态</li>
+<li> 阻塞(Block)状态</li>
+<li>执行(Running)状态</li>
+</ul>
+<h5 id="三种基本状态的转换"><a href="#三种基本状态的转换" class="headerlink" title="三种基本状态的转换"></a>三种基本状态的转换</h5><img src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/jincheng.png" class title="This is an image">
+
+<h5 id="创建状态和终止状态"><a href="#创建状态和终止状态" class="headerlink" title="创建状态和终止状态"></a>创建状态和终止状态</h5><img src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/sanzhong.png" class title="This is an image">
+
+<ul>
+<li>创建状态 </li>
+</ul>
+<p>创建一个进程是个很 复杂的过程，一般要通过多个步骤才能完成：如首先由进程 申请一个空白PCB，并向PCB中填写用于控制和管理进程的 信息；然后为该进程分配运行时所必须的资源；最后，把该 进程转入就绪状态并插入就绪队列之中。但如果进程所需的 资源尚不能得到满足，比如系统尚无足够的内存使进程无法 装入其中，此时创建工作尚未完成，进程不能被调度运行， 于是把此时进程所处的状态称为创建状态。</p>
+<ul>
+<li>终止状态</li>
+</ul>
+<p>进程的终止也要通过两个步骤：首先，是等待操作系统 进行善后处理，最后将其PCB清零，并将PCB空间返还系统。 当一个进程到达了自然结束点，或是出现了无法克服的错误， 或是被操作系统所终结，或是被其他有终止权的进程所终结， 它将进入终止状态。进入终止态的进程以后不能再执行，但 在操作系统中依然保留一个记录，其中保存状态码和一些计 时统计数据，供其他进程收集。一旦其他进程完成了对其信 息的提取之后，操作系统将删除该进程，即将其PCB清零， 并将该空白PCB返还系统。</p>
+<h5 id="挂起操作和进程状态的转换"><a href="#挂起操作和进程状态的转换" class="headerlink" title="挂起操作和进程状态的转换"></a>挂起操作和进程状态的转换</h5><ul>
+<li>挂起操作的引入 </li>
+</ul>
+<p>(1) 终端用户的需要。</p>
+<p> (2) 父进程请求。</p>
+<p> (3) 负荷调节的需要。</p>
+<p> (4) 操作系统的需要</p>
+<ul>
+<li> 引入挂起原语操作后三个进程状态的转换 </li>
+</ul>
+<p>(1) 活动就绪→静止就绪。 </p>
+<p>(2) 活动阻塞→静止阻塞。</p>
+<p> (3) 静止就绪→活动就绪。</p>
+<p> (4) 静止阻塞→活动阻塞</p>
+<ul>
+<li>引入挂起操作后五个进程状态的转换 </li>
+</ul>
+<img src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/wuzhong.png" class title="This is an image">
+
+<h5 id="进程管理中的数据结构"><a href="#进程管理中的数据结构" class="headerlink" title="进程管理中的数据结构"></a>进程管理中的数据结构</h5><ul>
+<li>操作系统中用于管理控制的数据结构</li>
+<li>进程控制块PCB的作用 </li>
+</ul>
+<p>(1) 作为独立运行基本单位的标志。 </p>
+<p>(2) 能实现间断性运行方式。</p>
+<p> (3) 提供进程管理所需要的信息。</p>
+<p> (4) 提供进程调度所需要的信息。</p>
+<p> (5) 实现与其它进程的同步与通信。</p>
+<ul>
+<li>进程控制块中的信息 </li>
+</ul>
+<ol>
+<li><p> 进程标识符 </p>
+</li>
+<li><p>处理机状态</p>
+</li>
+<li><p>进程调度信息 </p>
+<p>这些信息包括：① 进程状态，指明进程的当前状态， 它是作为进程调度和对换时的依据；② 进程优先级，是用于 描述进程使用处理机的优先级别的一个整数，优先级高的进 程应优先获得处理机；③ 进程调度所需的其它信息，它们与 所采用的进程调度算法有关，比如，进程已等待CPU的时间 总和、进程已执行的时间总和等；④ 事件，是指进程由执行 状态转变为阻塞状态所等待发生的事件，即阻塞原因。</p>
+</li>
+<li><p>进程控制信息 </p>
+<p>包括：① 程序和数 据的地址，进程实体中的程序和数据的内存或外存地(首)址， 以便再调度到该进程执行时，能从PCB中找到其程序和数据； ② 进程同步和通信机制，这是实现进程同步和进程通信时必 需的机制，如消息队列指针、信号量等，它们可能全部或部 分地放在PCB中；③ 资源清单，在该清单中列出了进程在运 行期间所需的全部资源(除CPU以外)，另外还有一张已分配 到该进程的资源的清单；④ 链接指针，它给出了本进程 (PCB)所在队列中的下一个进程的PCB的首地址。</p>
+</li>
+</ol>
+<ul>
+<li>进程控制块的组织方式 </li>
+</ul>
+<ol>
+<li> 线性方式</li>
+<li> 链接方式</li>
+<li> 索引方式</li>
+</ol>
+<h3 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h3><h4 id="操作系统内核"><a href="#操作系统内核" class="headerlink" title="操作系统内核"></a>操作系统内核</h4><h5 id="支撑功能"><a href="#支撑功能" class="headerlink" title="支撑功能"></a>支撑功能</h5><ul>
+<li>中断处理</li>
+<li>时钟管理</li>
+<li> 原语操作</li>
+</ul>
+<h5 id="资源管理功能"><a href="#资源管理功能" class="headerlink" title="资源管理功能"></a>资源管理功能</h5><ul>
+<li> 进程管理</li>
+<li>存储器管理</li>
+<li>设备管理</li>
+</ul>
+<h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><h5 id="进程的层次结构"><a href="#进程的层次结构" class="headerlink" title="进程的层次结构"></a>进程的层次结构</h5><p>在OS中，允许一个进程创建另一个进程，通常把创建进 程的进程称为父进程，而把被创建的进程称为子进程。子进 程可继续创建更多的孙进程，由此便形成了一个进程的层次 结构。如在UNIX中，进程与其子孙进程共同组成一个进程 家族(组)。</p>
+<h5 id="进程图"><a href="#进程图" class="headerlink" title="进程图"></a>进程图</h5><h5 id="引起创建进程的事件"><a href="#引起创建进程的事件" class="headerlink" title="引起创建进程的事件"></a>引起创建进程的事件</h5><p>为使程序之间能并发运行，应先为它们分别创建进程。 导致一个进程去创建另一个进程的典型事件有四类：</p>
+<p> (1) 用户登录。 (2) 作业调度。 (3) 提供服务。 (4) 应用请求。</p>
+<h5 id="进程的创建-Creation-of-Process"><a href="#进程的创建-Creation-of-Process" class="headerlink" title="进程的创建(Creation of Process)"></a>进程的创建(Creation of Process)</h5><p>在系统中每当出现了创建新进程的请求后，OS便调用进 程创建原语Creat按下述步骤创建一个新进程： (1) 申请空白PCB，为新进程申请获得唯一的数字标识符， 并从PCB集合中索取一个空白PCB。 (2) 为新进程分配其运行所需的资源，包括各种物理和 逻辑资源，如内存、文件、I/O设备和CPU时间等。 (3) 初始化进程控制块(PCB)。 (4) 如果进程就绪队列能够接纳新进程，便将新进程插 入就绪队列。</p>
+<h4 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h4><h5 id="引起进程终止-Termination-of-Process-的事件"><a href="#引起进程终止-Termination-of-Process-的事件" class="headerlink" title="引起进程终止(Termination of Process)的事件"></a>引起进程终止(Termination of Process)的事件</h5><p>(1) 正常结束 (2) 异常结束 (3) 外界干预</p>
+<h5 id="进程的终止过程"><a href="#进程的终止过程" class="headerlink" title="进程的终止过程"></a>进程的终止过程</h5><p>(1) 根据被终止进程的标识符，从PCB集合中检索出该进 程的PCB，从中读出该进程的状态； (2) 若被终止进程正处于执行状态，应立即终止该进程 的执行，并置调度标志为真，用于指示该进程被终止后应重 新进行调度；</p>
+<p>(3) 若该进程还有子孙进程，还应将其所有子孙进程也 都予以终止，以防它们成为不可控的进程； (4) 将被终止进程所拥有的全部资源或者归还给其父进 程，或者归还给系统； (5) 将被终止进程(PCB)从所在队列(或链表)中移出，等 待其它程序来搜集信息。</p>
+<h4 id="进程的阻塞与唤醒"><a href="#进程的阻塞与唤醒" class="headerlink" title="进程的阻塞与唤醒"></a>进程的阻塞与唤醒</h4><h4 id="进程的挂起与激活"><a href="#进程的挂起与激活" class="headerlink" title="进程的挂起与激活"></a>进程的挂起与激活</h4><h3 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h3><p>在OS中引入进程后，一方面可以使系统中的多道程序并 发执行，这不仅能有效地改善资源利用率，还可显著地提高 系统的吞吐量，但另一方面却使系统变得更加复杂。如果不 能采取有效的措施，对多个进程的运行进行妥善的管理，必 然会因为这些进程对系统资源的无序争夺给系统造成混乱。 致使每次处理的结果存在着不确定性，即显现出其不可再现 性。</p>
+<h4 id="进程同步的基本概念"><a href="#进程同步的基本概念" class="headerlink" title="进程同步的基本概念"></a>进程同步的基本概念</h4><h5 id="两种形式的制约关系"><a href="#两种形式的制约关系" class="headerlink" title="两种形式的制约关系"></a>两种形式的制约关系</h5><ol>
+<li>间接相互制约关系 2) 直接相互制约关系</li>
+</ol>
+<h5 id="临界资源-Critical-Resouce"><a href="#临界资源-Critical-Resouce" class="headerlink" title="临界资源(Critical Resouce)"></a>临界资源(Critical Resouce)</h5><p>在第一章中我们曾经介绍过，许多硬件资源如打印机、 磁带机等，都属于临界资源，诸进程间应采取互斥方式，实 现对这种资源的共享。</p>
+<h5 id="临界区-critical-section"><a href="#临界区-critical-section" class="headerlink" title="临界区(critical section)"></a>临界区(critical section)</h5><p>由前所述可知，不论是硬件临界资源还是软件临界资源，</p>
+<p>多个进程必须互斥地对它进行访问。人们把在每个进程中访 问临界资源的那段代码称为临界区(critical section)。</p>
+<h5 id="同步机制应遵循的规则"><a href="#同步机制应遵循的规则" class="headerlink" title="同步机制应遵循的规则"></a>同步机制应遵循的规则</h5><p>所有同步机制都应遵循下述四条准则：</p>
+<p> (1) 空闲让进。 (2) 忙则等待。 (3) 有限等待。 (4) 让权等待。</p>
+<h4 id="硬件同步机制"><a href="#硬件同步机制" class="headerlink" title="硬件同步机制"></a>硬件同步机制</h4><h5 id="关中断"><a href="#关中断" class="headerlink" title="关中断"></a>关中断</h5><p>① 滥用关中断 权力可能导致严重后果；② 关中断时间过长，会影响系统效 率，限制了处理器交叉执行程序的能力；③ 关中断方法也不 适用于多CPU 系统，因为在一个处理器上关中断并不能防止 进程在其它处理器上执行相同的临界段代码。</p>
+<h5 id="利用Test-and-Set指令实现互斥"><a href="#利用Test-and-Set指令实现互斥" class="headerlink" title="利用Test-and-Set指令实现互斥"></a>利用Test-and-Set指令实现互斥</h5><h5 id="利用Swap指令实现进程互斥"><a href="#利用Swap指令实现进程互斥" class="headerlink" title="利用Swap指令实现进程互斥"></a>利用Swap指令实现进程互斥</h5><h4 id="信号量机制"><a href="#信号量机制" class="headerlink" title="信号量机制"></a><strong>信号量机制</strong></h4><h5 id="整型信号量"><a href="#整型信号量" class="headerlink" title="整型信号量"></a>整型信号量</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int s&#x3D;1;</span><br><span class="line">void wait(int s)</span><br><span class="line">&#123;</span><br><span class="line">while(s&lt;&#x3D;0);</span><br><span class="line">s&#x3D;s-1;</span><br><span class="line">&#125;</span><br><span class="line">void signal(int s)</span><br><span class="line">&#123;</span><br><span class="line">s&#x3D;s+1;</span><br><span class="line">&#125;</span><br><span class="line">进程p0</span><br><span class="line">....</span><br><span class="line">wait(s);</span><br><span class="line">使用打印机资源...</span><br><span class="line">signal(s);</span><br><span class="line">.......</span><br></pre></td></tr></table></figure>
+
+<h5 id="记录型信号量"><a href="#记录型信号量" class="headerlink" title="记录型信号量"></a>记录型信号量</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">typedef struct&#123;</span><br><span class="line">int value;</span><br><span class="line">struct prcess *L;</span><br><span class="line">&#125;semaphore;</span><br><span class="line"></span><br><span class="line">void wait(semaphore s)&#123;</span><br><span class="line">s.value--;</span><br><span class="line">if(s.value&lt;0)&#123;</span><br><span class="line">block(s.L);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void signal(semaphore s)&#123;</span><br><span class="line">s.value++;</span><br><span class="line">if(s.value&lt;&#x3D;0)</span><br><span class="line">wakeup(s.L);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="信号量的应用"><a href="#信号量的应用" class="headerlink" title="信号量的应用"></a><strong>信号量的应用</strong></h4><h5 id="利用信号量实现进程互斥"><a href="#利用信号量实现进程互斥" class="headerlink" title="利用信号量实现进程互斥"></a>利用信号量实现进程互斥</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">semaphore mutex&#x3D;1;</span><br><span class="line">p1()&#123;</span><br><span class="line">...</span><br><span class="line">p(mutex);</span><br><span class="line">临界区代码...</span><br><span class="line">v(mutex);</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p2()</span><br><span class="line">&#123;</span><br><span class="line">...</span><br><span class="line">p(mutex);</span><br><span class="line">临界区代码...</span><br><span class="line">v(mutex);</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="利用信号量实现前趋关系"><a href="#利用信号量实现前趋关系" class="headerlink" title="利用信号量实现前趋关系"></a>利用信号量实现前趋关系</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">semaphore s&#x3D;0;</span><br><span class="line">p1()</span><br><span class="line">&#123;</span><br><span class="line">...;</span><br><span class="line">v(s);</span><br><span class="line">&#125;</span><br><span class="line">p2()</span><br><span class="line">&#123;</span><br><span class="line">p(s);</span><br><span class="line">...;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="经典进程的同步问题"><a href="#经典进程的同步问题" class="headerlink" title="经典进程的同步问题"></a>经典进程的同步问题</h3><h4 id="决生产者-消费者问题"><a href="#决生产者-消费者问题" class="headerlink" title="决生产者-消费者问题"></a>决生产者-消费者问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">semaphore mutex&#x3D;1;</span><br><span class="line">semaphore empty&#x3D;n;</span><br><span class="line">semaphore empty&#x3D;0;</span><br><span class="line">producter()</span><br><span class="line">&#123;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">	生产一个产品;</span><br><span class="line">	p(empty);</span><br><span class="line">	p(mutex);</span><br><span class="line">	将产品放入缓冲区;</span><br><span class="line">	v(mutex);</span><br><span class="line">	v(full);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">consumer()</span><br><span class="line">&#123;</span><br><span class="line">	p(full);</span><br><span class="line">	p(mutex);</span><br><span class="line">	将产品取出缓冲区;</span><br><span class="line">	v(mutex);</span><br><span class="line">	v(empty);</span><br><span class="line">	使用产品;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="哲学家进餐问题"><a href="#哲学家进餐问题" class="headerlink" title="哲学家进餐问题"></a>哲学家进餐问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">semaphore mutex&#x3D;1;</span><br><span class="line">semaphore chopstick[5]&#x3D;&#123;1,1,1,1,1&#125;;</span><br><span class="line">pi()</span><br><span class="line">&#123;</span><br><span class="line">	while(1)&#123;</span><br><span class="line">	p(mutex);</span><br><span class="line">	p(chopstick[i]);</span><br><span class="line">	p(chopstick[i+1]%5);</span><br><span class="line">	v(mutex);</span><br><span class="line">	吃饭;</span><br><span class="line">	v(chopstick[i]);</span><br><span class="line">	v(chopstick[i+1]%5);</span><br><span class="line">	思考;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="读者-写者问题"><a href="#读者-写者问题" class="headerlink" title="读者-写者问题"></a>读者-写者问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">semaphore wmutex &#x3D; 1;</span><br><span class="line">semaphore rmutex &#x3D; 1;</span><br><span class="line">int readcount &#x3D; 0;&#x2F;&#x2F; 记录有几个读者</span><br><span class="line">void reader()</span><br><span class="line">&#123;</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">		wait(rmutex); &#x2F;&#x2F; rmutex是为了保护readcount共享变量</span><br><span class="line">		if(readcount &#x3D;&#x3D; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			wait(wmutex);&#x2F;&#x2F; 保证第一个读进程来，写进程就不能进行</span><br><span class="line">		&#125;</span><br><span class="line">		readcount++;</span><br><span class="line">		signal(rmutex);</span><br><span class="line">		&#x2F;&#x2F; 读的过程</span><br><span class="line">		wait(rmutex);</span><br><span class="line">		readcount--;</span><br><span class="line">		if(readcount &#x3D;&#x3D; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			signal(wmutex); &#x2F;&#x2F; 保证最后一个读进程读完，释放wmutex信号量</span><br><span class="line">		&#125;</span><br><span class="line">		signal(rmutex);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void writer()</span><br><span class="line">&#123;</span><br><span class="line">	while(true)</span><br><span class="line">	&#123;</span><br><span class="line">		wait(wmutex);</span><br><span class="line">		&#x2F;&#x2F; 写的过程</span><br><span class="line">		signal(wmutex);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h3><h4 id="进程通信的类型"><a href="#进程通信的类型" class="headerlink" title="进程通信的类型"></a>进程通信的类型</h4><ul>
+<li><p>共享存储器系统(Shared-Memory System)</p>
+<p>在共享存储器系统中，相互通信的进程共享某些数据结</p>
+<p>构或共享存储区，进程之间能够通过这些空间进行通信。</p>
+</li>
+<li><p> 管道(pipe)通信系统 </p>
+</li>
+</ul>
+<p>​     所谓“管道”，是指用于连接一个读进程和一个写进程 以实现它们之间通信的一个共享文件，又名pipe文件。向管 道(共享文件)提供输入的发送进程(即写进程)以字符流形式 将大量的数据送入管道；而接受管道输出的接收进程(即读 进程)则从管道中接收(读)数据。由于发送进程和接收进程是 利用管道进行通信的，故又称为管道通信</p>
+<ul>
+<li> 消息传递系统(Message passing system) </li>
+</ul>
+<p>在该机制中，进程不必借助任何共享存储区或数据结构， 而是以格式化的消息 (message)为单位，将通信的数据封装在 消息中，并利用操作系统提供的一组通信命令(原语)，在进 程间进行消息传递，完成进程间的数据交换。</p>
+<ul>
+<li> 客户机-服务器系统(Client-Server system) </li>
+</ul>
+<h4 id="消息传递通信的实现方式"><a href="#消息传递通信的实现方式" class="headerlink" title="消息传递通信的实现方式"></a>消息传递通信的实现方式</h4><ul>
+<li><p> 直接消息传递系统 </p>
+</li>
+<li><p>信箱通信 </p>
+</li>
+</ul>
+<h3 id="线程的基本概念"><a href="#线程的基本概念" class="headerlink" title="线程的基本概念"></a>线程的基本概念</h3><p>如果说，在OS中引入进程的目的是为了使多个程序能并 发执行，以提高资源利用率和系统吞吐量，那么，在操作系 统中再引入线程，则是为了减少程序在并发执行时所付出的 时空开销，使OS具有更好的并发性。</p>
+<h4 id="线程——作为调度和分派的基本单位"><a href="#线程——作为调度和分派的基本单位" class="headerlink" title="线程——作为调度和分派的基本单位"></a>线程——作为调度和分派的基本单位</h4><h4 id="线程与进程的比较"><a href="#线程与进程的比较" class="headerlink" title="线程与进程的比较"></a>线程与进程的比较</h4><ol>
+<li>调度的基本单位</li>
+<li> 并发性</li>
+<li> 拥有资源 </li>
+<li>独立性 </li>
+<li>系统开销 </li>
+<li>支持多处理机系统</li>
+</ol>
+<h4 id="线程的状态和线程控制块"><a href="#线程的状态和线程控制块" class="headerlink" title="线程的状态和线程控制块"></a>线程的状态和线程控制块</h4><h5 id="线程运行的三个状态"><a href="#线程运行的三个状态" class="headerlink" title="线程运行的三个状态"></a>线程运行的三个状态</h5><h5 id="线程控制块TCB"><a href="#线程控制块TCB" class="headerlink" title="线程控制块TCB"></a>线程控制块TCB</h5><h5 id="多线程OS中的进程属性"><a href="#多线程OS中的进程属性" class="headerlink" title="多线程OS中的进程属性"></a>多线程OS中的进程属性</h5><p>(1) 进程是一个可拥有资源的基本单位。</p>
+<p> (2) 多个线程可并发执行。</p>
+<p> (3) 进程已不是可执行的实体。</p>
+<h3 id="线程的实现"><a href="#线程的实现" class="headerlink" title="线程的实现"></a>线程的实现</h3><h4 id="线程的实现方式"><a href="#线程的实现方式" class="headerlink" title="线程的实现方式"></a>线程的实现方式</h4><h5 id="内核支持线程KST-Kernel-Supported-Threads"><a href="#内核支持线程KST-Kernel-Supported-Threads" class="headerlink" title="内核支持线程KST(Kernel Supported Threads)"></a>内核支持线程KST(Kernel Supported Threads)</h5><p>这种线程实现方式主要有四个主要优点：</p>
+<p> (1) 在多处理器系统中，内核能够同时调度同一进程中 的多个线程并行执行；</p>
+<p> (2) 如果进程中的一个线程被阻塞了，内核可以调度该 进程中的其它线程占有处理器运行，也可以运行其它进程中 的线程；</p>
+<p> (3) 内核支持线程具有很小的数据结构和堆栈，线程的 切换比较快，切换开销小；</p>
+<p> (4) 内核本身也可以采用多线程技术，可以提高系统的 执行速度和效率。</p>
+<h5 id="用户级线程ULT-User-Level-Threads"><a href="#用户级线程ULT-User-Level-Threads" class="headerlink" title="用户级线程ULT(User Level Threads)"></a>用户级线程ULT(User Level Threads)</h5><p>使用用户级线程方式有许多优点： (1) 线程切换不需要转换到内核空间。 (2) 调度算法可以是进程专用的。 (3) 用户级线程的实现与OS平台无关，因为对于线程管 理的代码是属于用户程序的一部分，所有的应用程序都可以 对之进行共享。</p>
+<p>而用户级线程方式的主要缺点则在于： (1) 系统调用的阻塞问题。在基于进程机制的OS中，大 多数系统调用将使进程阻塞，因此，当线程执行一个系统调 用时，不仅该线程被阻塞，而且，进程内的所有线程会被阻 塞。而在内核支持线程方式中，则进程中的其它线程仍然可 以运行。 (2) 在单纯的用户级线程实现方式中，多线程应用不能 利用多处理机进行多重处理的优点，内核每次分配给一个进 程的仅有一个CPU，因此，进程中仅有一个线程能执行，在 该线程放弃CPU之前，其它线程只能等待。</p>
+<p> 组合方式 </p>
+
+
+<h4 id="线程的创建和终止"><a href="#线程的创建和终止" class="headerlink" title="线程的创建和终止"></a>线程的创建和终止</h4><h5 id="线程的创建"><a href="#线程的创建" class="headerlink" title="线程的创建"></a>线程的创建</h5><p>应用程序在启动时，通常仅有一个线程在执行，人们把 线程称为“初始化线程”，它的主要功能是用于创建新线程。 在创建新线程时，需要利用一个线程创建函数(或系统调用)， 并提供相应的参数，如指向线程主程序的入口指针、堆栈的 大小，以及用于调度的优先级等。在线程的创建函数执行完 后，将返回一个线程标识符供以后使用。</p>
+<h5 id="线程的终止"><a href="#线程的终止" class="headerlink" title="线程的终止"></a>线程的终止</h5><p>当一个线程完成了自己的任务(工作)后，或是线程在运 行中出现异常情况而须被强行终止时，由终止线程通过调用 相应的函数(或系统调用)对它执行终止操作。但有些线程(主 要是系统线程)，它们一旦被建立起来之后，便一直运行下 去而不被终止。在大多数的OS中，线程被中止后并不立即释 放它所占有的资源，只有当进程中的其它线程执行了分离函 数后，被终止的线程才与资源分离，此时的资源才能被其它 线程利用。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">shrilly</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/">https://youranner.github.io/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></div><div class="post_share"><div class="social-share" data-image="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"><img class="next-cover" src="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">模拟电子技术基础期末复习</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">shrilly</div><div class="author-info__description">blog and share my life</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">record my life</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">操作系统引论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%AE%E6%A0%87%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">操作系统的目标和作用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="toc-number">1.1.1.</span> <span class="toc-text">操作系统的目标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">1.1.2.</span> <span class="toc-text">操作系统的作用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E8%BF%87%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">操作系统的发展过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="toc-number">1.3.</span> <span class="toc-text">操作系统的基本特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.4.</span> <span class="toc-text">操作系统的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.5.</span> <span class="toc-text">操作系统的结构设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8E%E6%8E%A7%E5%88%B6"><span class="toc-number">2.</span> <span class="toc-text">进程的描述与控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E9%A9%B1%E5%9B%BE%E5%92%8C%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">前驱图和程序执行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E9%A9%B1%E5%9B%BE"><span class="toc-number">2.1.1.</span> <span class="toc-text">前驱图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E9%A1%BA%E5%BA%8F%E6%89%A7%E8%A1%8C"><span class="toc-number">2.1.2.</span> <span class="toc-text">程序顺序执行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E5%B9%B6%E5%8F%91%E6%89%A7%E8%A1%8C"><span class="toc-number">2.1.3.</span> <span class="toc-text">程序并发执行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.2.</span> <span class="toc-text">进程的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E7%89%B9%E5%BE%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">进程的定义和特征</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-PCB"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">定义(PCB)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%89%B9%E5%BE%81"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">特征</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%8A%B6%E6%80%81%E5%8F%8A%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.2.</span> <span class="toc-text">进程的基本状态及转换</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%8A%B6%E6%80%81"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">进程的三种基本状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">三种基本状态的转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%8A%B6%E6%80%81%E5%92%8C%E7%BB%88%E6%AD%A2%E7%8A%B6%E6%80%81"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">创建状态和终止状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.2.2.4.</span> <span class="toc-text">挂起操作和进程状态的转换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.5.</span> <span class="toc-text">进程管理中的数据结构</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-number">2.3.</span> <span class="toc-text">进程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8"><span class="toc-number">2.3.1.</span> <span class="toc-text">操作系统内核</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%94%AF%E6%92%91%E5%8A%9F%E8%83%BD"><span class="toc-number">2.3.1.1.</span> <span class="toc-text">支撑功能</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD"><span class="toc-number">2.3.1.2.</span> <span class="toc-text">资源管理功能</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">2.3.2.</span> <span class="toc-text">进程的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="toc-number">2.3.2.1.</span> <span class="toc-text">进程的层次结构</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%9B%BE"><span class="toc-number">2.3.2.2.</span> <span class="toc-text">进程图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%95%E8%B5%B7%E5%88%9B%E5%BB%BA%E8%BF%9B%E7%A8%8B%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.3.2.3.</span> <span class="toc-text">引起创建进程的事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA-Creation-of-Process"><span class="toc-number">2.3.2.4.</span> <span class="toc-text">进程的创建(Creation of Process)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%BB%88%E6%AD%A2"><span class="toc-number">2.3.3.</span> <span class="toc-text">进程的终止</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%95%E8%B5%B7%E8%BF%9B%E7%A8%8B%E7%BB%88%E6%AD%A2-Termination-of-Process-%E7%9A%84%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.3.3.1.</span> <span class="toc-text">引起进程终止(Termination of Process)的事件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%BB%88%E6%AD%A2%E8%BF%87%E7%A8%8B"><span class="toc-number">2.3.3.2.</span> <span class="toc-text">进程的终止过程</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E9%98%BB%E5%A1%9E%E4%B8%8E%E5%94%A4%E9%86%92"><span class="toc-number">2.3.4.</span> <span class="toc-text">进程的阻塞与唤醒</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8C%82%E8%B5%B7%E4%B8%8E%E6%BF%80%E6%B4%BB"><span class="toc-number">2.3.5.</span> <span class="toc-text">进程的挂起与激活</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-number">2.4.</span> <span class="toc-text">进程同步</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.4.1.</span> <span class="toc-text">进程同步的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%88%B6%E7%BA%A6%E5%85%B3%E7%B3%BB"><span class="toc-number">2.4.1.1.</span> <span class="toc-text">两种形式的制约关系</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%B4%E7%95%8C%E8%B5%84%E6%BA%90-Critical-Resouce"><span class="toc-number">2.4.1.2.</span> <span class="toc-text">临界资源(Critical Resouce)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%B4%E7%95%8C%E5%8C%BA-critical-section"><span class="toc-number">2.4.1.3.</span> <span class="toc-text">临界区(critical section)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6%E5%BA%94%E9%81%B5%E5%BE%AA%E7%9A%84%E8%A7%84%E5%88%99"><span class="toc-number">2.4.1.4.</span> <span class="toc-text">同步机制应遵循的规则</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6"><span class="toc-number">2.4.2.</span> <span class="toc-text">硬件同步机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B3%E4%B8%AD%E6%96%AD"><span class="toc-number">2.4.2.1.</span> <span class="toc-text">关中断</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A9%E7%94%A8Test-and-Set%E6%8C%87%E4%BB%A4%E5%AE%9E%E7%8E%B0%E4%BA%92%E6%96%A5"><span class="toc-number">2.4.2.2.</span> <span class="toc-text">利用Test-and-Set指令实现互斥</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A9%E7%94%A8Swap%E6%8C%87%E4%BB%A4%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5"><span class="toc-number">2.4.2.3.</span> <span class="toc-text">利用Swap指令实现进程互斥</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6"><span class="toc-number">2.4.3.</span> <span class="toc-text">信号量机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B4%E5%9E%8B%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="toc-number">2.4.3.1.</span> <span class="toc-text">整型信号量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AE%B0%E5%BD%95%E5%9E%8B%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="toc-number">2.4.3.2.</span> <span class="toc-text">记录型信号量</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%A1%E5%8F%B7%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">2.4.4.</span> <span class="toc-text">信号量的应用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E5%AE%9E%E7%8E%B0%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5"><span class="toc-number">2.4.4.1.</span> <span class="toc-text">利用信号量实现进程互斥</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E4%BF%A1%E5%8F%B7%E9%87%8F%E5%AE%9E%E7%8E%B0%E5%89%8D%E8%B6%8B%E5%85%B3%E7%B3%BB"><span class="toc-number">2.4.4.2.</span> <span class="toc-text">利用信号量实现前趋关系</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98"><span class="toc-number">2.5.</span> <span class="toc-text">经典进程的同步问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B3%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-number">2.5.1.</span> <span class="toc-text">决生产者-消费者问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98"><span class="toc-number">2.5.2.</span> <span class="toc-text">哲学家进餐问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E8%80%85-%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-number">2.5.3.</span> <span class="toc-text">读者-写者问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1"><span class="toc-number">2.6.</span> <span class="toc-text">进程通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%80%9A%E4%BF%A1%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.6.1.</span> <span class="toc-text">进程通信的类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B6%88%E6%81%AF%E4%BC%A0%E9%80%92%E9%80%9A%E4%BF%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-number">2.6.2.</span> <span class="toc-text">消息传递通信的实现方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.7.</span> <span class="toc-text">线程的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E2%80%94%E2%80%94%E4%BD%9C%E4%B8%BA%E8%B0%83%E5%BA%A6%E5%92%8C%E5%88%86%E6%B4%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8D%95%E4%BD%8D"><span class="toc-number">2.7.1.</span> <span class="toc-text">线程——作为调度和分派的基本单位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">2.7.2.</span> <span class="toc-text">线程与进程的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81%E5%92%8C%E7%BA%BF%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%9D%97"><span class="toc-number">2.7.3.</span> <span class="toc-text">线程的状态和线程控制块</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E8%BF%90%E8%A1%8C%E7%9A%84%E4%B8%89%E4%B8%AA%E7%8A%B6%E6%80%81"><span class="toc-number">2.7.3.1.</span> <span class="toc-text">线程运行的三个状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%9D%97TCB"><span class="toc-number">2.7.3.2.</span> <span class="toc-text">线程控制块TCB</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8BOS%E4%B8%AD%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%B1%9E%E6%80%A7"><span class="toc-number">2.7.3.3.</span> <span class="toc-text">多线程OS中的进程属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.8.</span> <span class="toc-text">线程的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-number">2.8.1.</span> <span class="toc-text">线程的实现方式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%86%85%E6%A0%B8%E6%94%AF%E6%8C%81%E7%BA%BF%E7%A8%8BKST-Kernel-Supported-Threads"><span class="toc-number">2.8.1.1.</span> <span class="toc-text">内核支持线程KST(Kernel Supported Threads)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%BA%A7%E7%BA%BF%E7%A8%8BULT-User-Level-Threads"><span class="toc-number">2.8.1.2.</span> <span class="toc-text">用户级线程ULT(User Level Threads)</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E7%BB%88%E6%AD%A2"><span class="toc-number">2.8.2.</span> <span class="toc-text">线程的创建和终止</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">2.8.2.1.</span> <span class="toc-text">线程的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%BB%88%E6%AD%A2"><span class="toc-number">2.8.2.2.</span> <span class="toc-text">线程的终止</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="操作系统期末复习"><img src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统期末复习"/></a><div class="content"><a class="title" href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="操作系统期末复习">操作系统期末复习</a><time datetime="2020-11-29T03:40:25.000Z" title="Created 2020-11-29 11:40:25">2020-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="模拟电子技术基础期末复习"><img src="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模拟电子技术基础期末复习"/></a><div class="content"><a class="title" href="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="模拟电子技术基础期末复习">模拟电子技术基础期末复习</a><time datetime="2020-11-27T05:31:38.000Z" title="Created 2020-11-27 13:31:38">2020-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/" title="计网应用题"><img src="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网应用题"/></a><div class="content"><a class="title" href="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/" title="计网应用题">计网应用题</a><time datetime="2020-11-25T13:55:52.000Z" title="Created 2020-11-25 21:55:52">2020-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/25/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="《计算机网络》复习笔记"><img src="/2020/11/25/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《计算机网络》复习笔记"/></a><div class="content"><a class="title" href="/2020/11/25/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%8B%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="《计算机网络》复习笔记">《计算机网络》复习笔记</a><time datetime="2020-11-25T12:23:39.000Z" title="Created 2020-11-25 20:23:39">2020-11-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/24/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" title="树与二叉树"><img src="/2020/11/24/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="树与二叉树"/></a><div class="content"><a class="title" href="/2020/11/24/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" title="树与二叉树">树与二叉树</a><time datetime="2020-11-24T07:31:45.000Z" title="Created 2020-11-24 15:31:45">2020-11-24</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By shrilly</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
