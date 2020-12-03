@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="zh-CH" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>图 | YOURanner</title><meta name="keywords" content="数据结构,图"><meta name="author" content="shrilly"><meta name="copyright" content="shrilly"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="数据结构———图1. 图的定义 图：图（Graph）是由顶点的有穷非空集合和顶点之间边的集合组成，通常表示为：G（V，{E}），其中，G 表示一个图，V 是图 G 中顶点的集合，E 是图 G 中边的集合  对于图的定义，需要明确注意的几点地方： ​    ■  线性表中把数据元素叫元素，树中将数据元素叫结点，在图中数据元素，则称之为顶点（Vertex）（也可以称为Node）。 ​    ■  线性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图">
+<meta property="og:url" content="https://youranner.github.io/2020/12/01/%E5%9B%BE/index.html">
+<meta property="og:site_name" content="YOURanner">
+<meta property="og:description" content="数据结构———图1. 图的定义 图：图（Graph）是由顶点的有穷非空集合和顶点之间边的集合组成，通常表示为：G（V，{E}），其中，G 表示一个图，V 是图 G 中顶点的集合，E 是图 G 中边的集合  对于图的定义，需要明确注意的几点地方： ​    ■  线性表中把数据元素叫元素，树中将数据元素叫结点，在图中数据元素，则称之为顶点（Vertex）（也可以称为Node）。 ​    ■  线性">
+<meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="https://youranner.github.io/2020/12/01/%E5%9B%BE/background.jpg">
+<meta property="article:published_time" content="2020-12-01T05:03:00.000Z">
+<meta property="article:modified_time" content="2020-12-01T13:31:53.229Z">
+<meta property="article:author" content="shrilly">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="图">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://youranner.github.io/2020/12/01/%E5%9B%BE/background.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://youranner.github.io/2020/12/01/%E5%9B%BE/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-01 21:31:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/2020/12/01/%E5%9B%BE/background.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">YOURanner</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">图</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-12-01T05:03:00.000Z" title="Created 2020-12-01 13:03:00">2020-12-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-12-01T13:31:53.229Z" title="Updated 2020-12-01 21:31:53">2020-12-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/knowledge/">knowledge</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数据结构———图"><a href="#数据结构———图" class="headerlink" title="数据结构———图"></a>数据结构———图</h1><h2 id="1-图的定义"><a href="#1-图的定义" class="headerlink" title="1. 图的定义"></a><strong>1.</strong> <strong>图的定义</strong></h2><p> 图：图（Graph）是由顶点的有穷非空集合和顶点之间边的集合组成，通常表示为：G（V，{E}），其中，G 表示一个图，V 是图 G 中顶点的集合，E 是图 G 中边的集合 </p>
+<p>对于图的定义，需要明确注意的几点地方：</p>
+<p>​    ■  线性表中把数据元素叫元素，树中将数据元素叫结点，在图中数据元素，则称之为顶点（<strong>Vertex</strong>）（也可以称为Node）。</p>
+<p>​    ■  线性表中可以没有数据元素，称为空表。树中可以没有结点，叫做空树。而图结构中，不允许没有顶点。在定义中，若V是顶点的集合，则强调了顶点集合V有穷非空</p>
+<p> ■  线性表中，相邻的数据元素之间具有线性关系，在树结构中相邻两层的结点具有层次关系，而图中，任意两点之间都可能有关系，顶点之间的逻辑关系用边来表示，边集可以是空的。 </p>
+<h3 id="1-1-各种图定义"><a href="#1-1-各种图定义" class="headerlink" title="1.1 各种图定义"></a><strong>1.1</strong> <strong>各种图定义</strong></h3><p> 无向边：若顶点vi到vj之间的边没有方向，则称这条边为无向边，用无序偶对（vi,vj)  来表示。 </p>
+<p> 无向图：如果图中任意两个顶点之间的边都是无向边，则称该图为无向图。 </p>
+<p> 有向边：若从顶点vi 到vj的边有方向，则称这条边为有向边，也称为弧。用有序偶&lt;vi,vj&gt; 来表示,vi称为弧尾,vj称为弧头。 </p>
+<p> 有向图：如果图中任意两个顶点之间的边都是有向边，则称该图为有向图 </p>
+<p> 简单图 : 在图中，若不存在顶点到其自身的边，而同一条边不重复出现 </p>
+<p> 无向完全图：在无向图中，如果任意两个顶点之间都存在边，则称该图为无向完全图 </p>
+<p> 有向完全图：在有向图中，如果任意两个顶点之间都存在方向互为相反的两条弧，则称该图为有向完全图。 </p>
+<p> 有很少条边或弧的图称为稀疏图，反之称为稠密图。这里稀疏图和稠密图是模糊的概念，都是相对而言的。 </p>
+<p> 权：有些图的边或弧具有与它相关的数字，这种与图的边或弧相关的数叫做权（Weight）。这些权可以表示一个顶点到另一个顶点的距离或耗费。 </p>
+<p> 网：带权的图通常称为网。 </p>
+<p>子图：两图G={V，{E}}和G’={V‘，{E’}} ,如果 V′⊆V 且 E′⊆E ，则称 G′ 为 G 的子图   </p>
+<h3 id="1-2-图的顶点与边间关系"><a href="#1-2-图的顶点与边间关系" class="headerlink" title="1.2 图的顶点与边间关系"></a><strong>1.2</strong> <strong>图的顶点与边间关系</strong></h3><h4 id="1-无向图"><a href="#1-无向图" class="headerlink" title="1. 无向图"></a>1. 无向图</h4><p> 邻接点: 对于无向图 <img src="https://private.codecogs.com/gif.latex?G=%20%5Cbegin%7Bpmatrix%7DV,%5Cbegin%7BBmatrix%7D%20E%20%5Cend%7BBmatrix%7D%5Cend%7Bpmatrix%7D" alt="G= \begin{pmatrix}V,\begin{Bmatrix} E \end{Bmatrix}\end{pmatrix}">，如果（v,v′）∈ E ，则称顶点 v 和 v′ 互为邻接点（Adjacent），即 v 和 v′ 相邻接。 </p>
+<p> 度：顶点 v 的度（Degree）是和 v 相关联的边的数目，记为 TD（v）。 </p>
+<h4 id="2-有向图"><a href="#2-有向图" class="headerlink" title="2. 有向图"></a><strong>2. 有向图</strong></h4><p>入度：以顶点 v 为头的弧的数目称为 v 的入度（InDegree），记为 ID（v）。</p>
+<p> 出度：以 v 为尾的弧的数目称为 v 的出度（OutDegree），记为 OD（v）。</p>
+<p>路径的长度是路径上的边或弧的数目。</p>
+<p>回路或环：第一个顶点到最后一个顶点相同的路径称为回路或环（Cycle）。</p>
+<p>简单回路：序列中顶点不重复出现的路径称为简单回路。</p>
+<p>简单回路或简单环：除了第一个顶点和最后一个顶点之外，其余顶点不重复出现的回路，称为简单回路或简单环。</p>
+<h3 id="1-3-连通图相关术语"><a href="#1-3-连通图相关术语" class="headerlink" title="1.3 连通图相关术语"></a>1.3 连通图相关术语</h3><p> 连通图：在无向图 G 中，如果从顶点 v 到顶点 v′ 有路径，则称 v 和 v′ 是连通的。如果对于图中任意两个顶点 都是连通的，则称 G 是连通图</p>
+<p>连通分量：无向图中的极大连通子图称为连通分量。</p>
+<p>​    注意连通分量的概念，它强调：</p>
+<p>​    ■  要是子图；</p>
+<p>​    ■  子图要是连通的；</p>
+<p>​    ■  连通子图含有极大项点数；</p>
+<p>​    ■  具有极大项点数的连通子图包含依附于这些顶点的所有边。</p>
+<p>强连通图：在有向图 <strong>G</strong> 中，如果对于每一对 <img src="https://private.codecogs.com/gif.latex?v_%7Bi%7D" alt="v_{i}"> 、<img src="https://private.codecogs.com/gif.latex?v_%7Bj%7D%5Cin%20V" alt="v_{j}\in V">  ，(vi!=vj)从 <img src="https://private.codecogs.com/gif.latex?v_%7Bi%7D" alt="v_{i}"> 到 <img src="https://private.codecogs.com/gif.latex?v_%7Bj%7D" alt="v_{j}"> 和从vj 到vi  都存在路径，则称 G 是强连通图。</p>
+<p> 强连通分量：有向图中的极大连通子图称做有向图的强连通分量。</p>
+<p>连通图的生成树定义：</p>
+<p>​    一个连通图的生成树是一个极小的连通子图，它含有图中全部的 n 个顶点，但只有足以构成一棵树的 n-1 条边。</p>
+<p> 有向树：如果一个有向图恰有一个顶点的入度为 0 ，其余顶点的入度均为 1 ，则是一棵有向树。 </p>
+<p> 森林：一个有向图的生成森林由若干棵有向树组成，含有图中全部顶点，但有足以构成若干棵不相交的有向树的弧。 </p>
+<h3 id="1-4-图的定义与术语总结"><a href="#1-4-图的定义与术语总结" class="headerlink" title="1.4 图的定义与术语总结"></a><strong>1.4</strong> <strong>图的定义与术语总结</strong></h3><p>​    图按照有无方向分为<strong>无向图</strong>和<strong>有向图</strong>。无向图由<strong>顶点</strong>和<strong>边</strong>构成，有向图由顶点和<strong>弧</strong>构成。弧有<strong>弧尾</strong>和<strong>弧头</strong>之分。</p>
+<p>​    图按照边或弧的多少分<strong>稀疏图和稠密图</strong>。如果任意两个顶点之间都存在叫<strong>完全图</strong>，有向的叫<strong>有向完全图</strong>。若无重复的边或顶点到自身的边则叫<strong>简单图</strong>。</p>
+<p>​    图中顶点之间有<strong>邻接点、依附</strong>的概念。无向图顶点的边叫做<strong>度</strong>，有向图顶点分为<strong>入度和出度</strong>。</p>
+<p>​    图的边上或弧上带<strong>权</strong>则称为<strong>网</strong></p>
+<p>​    图中顶点间存在<strong>路径</strong>，两顶点存在路径则说明是<strong>连通</strong>的，如果路径最终回到起始点则则称为<strong>环</strong>，当中不重复叫做<strong>简单路径</strong>。若任意两顶点都是连通的，则图就是<strong>连通图</strong>，有向则称<strong>强连通图</strong>。图中有子图，若子图极大连通则就是<strong>连通分量</strong>，有向的则称<strong>强连通分量</strong>。</p>
+<p>​    无向图中连通且 <strong>n</strong> 个顶点 <strong>n-1</strong> 条边叫<strong>生成树</strong>。有向图中一顶点入度为 <strong>0</strong> 其余顶点入度为 <strong>1</strong> 的叫<strong>有向树</strong>。一个有向图由若干棵有向树构成生成<strong>森林</strong></p>
+<h2 id="2-图的抽象数据类型"><a href="#2-图的抽象数据类型" class="headerlink" title="2. 图的抽象数据类型"></a><strong>2.</strong> 图的抽象数据类型</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">shrilly</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://youranner.github.io/2020/12/01/%E5%9B%BE/">https://youranner.github.io/2020/12/01/%E5%9B%BE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><a class="post-meta__tags" href="/tags/%E5%9B%BE/">图</a></div><div class="post_share"><div class="social-share" data-image="/2020/12/01/%E5%9B%BE/background.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/12/03/%E6%A0%88/"><img class="prev-cover" src="/2020/12/03/%E6%A0%88/background.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">栈</div></div></a></div><div class="next-post pull-right"><a href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/"><img class="next-cover" src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">操作系统期末复习</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2020/11/24/树与二叉树/" title="树与二叉树"><img class="cover" src="/2020/11/24/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-24</div><div class="title">树与二叉树</div></div></a></div><div><a href="/2020/12/03/栈/" title="栈"><img class="cover" src="/2020/12/03/%E6%A0%88/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-03</div><div class="title">栈</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">shrilly</div><div class="author-info__description">blog and share my life</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">record my life</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E2%80%94%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">数据结构———图</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.</span> <span class="toc-text">1. 图的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%90%84%E7%A7%8D%E5%9B%BE%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 各种图定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%9B%BE%E7%9A%84%E9%A1%B6%E7%82%B9%E4%B8%8E%E8%BE%B9%E9%97%B4%E5%85%B3%E7%B3%BB"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 图的顶点与边间关系</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%97%A0%E5%90%91%E5%9B%BE"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">1. 无向图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%9C%89%E5%90%91%E5%9B%BE"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2. 有向图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E8%BF%9E%E9%80%9A%E5%9B%BE%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 连通图相关术语</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%9B%BE%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%9C%AF%E8%AF%AD%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 图的定义与术语总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9B%BE%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">2. 图的抽象数据类型</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/12/03/%E6%A0%88/" title="栈"><img src="/2020/12/03/%E6%A0%88/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="栈"/></a><div class="content"><a class="title" href="/2020/12/03/%E6%A0%88/" title="栈">栈</a><time datetime="2020-12-03T07:45:01.000Z" title="Created 2020-12-03 15:45:01">2020-12-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/01/%E5%9B%BE/" title="图"><img src="/2020/12/01/%E5%9B%BE/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图"/></a><div class="content"><a class="title" href="/2020/12/01/%E5%9B%BE/" title="图">图</a><time datetime="2020-12-01T05:03:00.000Z" title="Created 2020-12-01 13:03:00">2020-12-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="操作系统期末复习"><img src="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统期末复习"/></a><div class="content"><a class="title" href="/2020/11/29/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="操作系统期末复习">操作系统期末复习</a><time datetime="2020-11-29T03:40:25.000Z" title="Created 2020-11-29 11:40:25">2020-11-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="模拟电子技术基础期末复习"><img src="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="模拟电子技术基础期末复习"/></a><div class="content"><a class="title" href="/2020/11/27/%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/" title="模拟电子技术基础期末复习">模拟电子技术基础期末复习</a><time datetime="2020-11-27T05:31:38.000Z" title="Created 2020-11-27 13:31:38">2020-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/" title="计网应用题"><img src="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计网应用题"/></a><div class="content"><a class="title" href="/2020/11/25/%E8%AE%A1%E7%BD%91%E5%BA%94%E7%94%A8%E9%A2%98/" title="计网应用题">计网应用题</a><time datetime="2020-11-25T13:55:52.000Z" title="Created 2020-11-25 21:55:52">2020-11-25</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/2020/12/01/%E5%9B%BE/background.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 By shrilly</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,welcome to my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
